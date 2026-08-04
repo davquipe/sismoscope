@@ -6,7 +6,11 @@ Observatorio sísmico web, estático e interactivo centrado en Perú y con cober
 
 ## Demo
 
-El repositorio incluye un workflow para GitHub Pages. La URL pública aparecerá en el environment `github-pages` cuando Pages esté habilitado y el primer despliegue termine correctamente; este documento no presupone un usuario, dominio o repositorio concretos.
+La instancia pública de este repositorio se desplegará en:
+
+**[https://davquipe.github.io/sismoscope/](https://davquipe.github.io/sismoscope/)**
+
+La URL quedará disponible cuando GitHub Pages esté habilitado con **GitHub Actions** como fuente y el workflow de despliegue termine correctamente.
 
 ## Alcance de la primera entrega
 

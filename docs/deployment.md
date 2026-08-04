@@ -4,7 +4,11 @@
 
 SismoScope genera archivos estáticos en `dist/`. No necesita servidor, funciones, secretos ni variables privadas. La fuente de datos se consulta desde el navegador a endpoints públicos de USGS.
 
-GitHub determina la URL del sitio según el tipo de Pages y cualquier dominio configurado. La URL sólo está activa después de habilitar Pages y completar un deployment; una build local no permite anticiparla con fiabilidad.
+La URL pública de este repositorio es:
+
+**[https://davquipe.github.io/sismoscope/](https://davquipe.github.io/sismoscope/)**
+
+La URL sólo estará activa después de habilitar Pages con **GitHub Actions** como fuente y completar un deployment. Para forks, repositorios con otro nombre o dominios personalizados, GitHub determina la URL efectiva durante el despliegue.
 
 ## Base path
 
