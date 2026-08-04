@@ -1,0 +1,333 @@
+.settings-page {
+  max-width: 1320px;
+}
+
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 330px);
+  gap: 20px;
+  align-items: start;
+}
+
+.settings-main,
+.settings-sidebar {
+  display: grid;
+  gap: 16px;
+}
+
+.settings-section .panel__header > svg {
+  color: var(--teal);
+}
+
+.settings-section__body {
+  display: grid;
+  gap: 22px;
+}
+
+.settings-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.settings-fieldset legend {
+  margin-bottom: 9px;
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+}
+
+.settings-choice-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-choice-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.settings-choice-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.settings-choice {
+  display: flex;
+  min-height: 76px;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  background: var(--surface-raised);
+  text-align: left;
+  cursor: pointer;
+}
+
+.settings-choice:hover {
+  border-color: var(--teal);
+}
+
+.settings-choice[aria-pressed='true'] {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+  background: var(--teal-soft);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--teal) 28%, transparent);
+}
+
+.settings-choice svg {
+  flex: 0 0 auto;
+  margin-top: 1px;
+}
+
+.settings-choice strong,
+.settings-choice small {
+  display: block;
+}
+
+.settings-choice strong {
+  color: var(--ink);
+  font-size: 0.75rem;
+}
+
+.settings-choice small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.63rem;
+  line-height: 1.35;
+}
+
+.settings-toggle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  cursor: pointer;
+}
+
+.settings-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.settings-toggle__control {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface-muted);
+}
+
+.settings-toggle__control::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--muted);
+  content: '';
+  transition: transform 150ms ease-out;
+}
+
+.settings-toggle input:checked + .settings-toggle__control {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.settings-toggle input:checked + .settings-toggle__control::after {
+  background: var(--teal);
+  transform: translateX(16px);
+}
+
+.settings-toggle input:focus-visible + .settings-toggle__control {
+  outline: 3px solid color-mix(in srgb, var(--teal) 65%, white);
+  outline-offset: 2px;
+}
+
+.settings-toggle strong,
+.settings-toggle small {
+  display: block;
+}
+
+.settings-toggle strong {
+  font-size: 0.76rem;
+}
+
+.settings-toggle small {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.64rem;
+  line-height: 1.35;
+}
+
+.settings-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.settings-form-grid__wide {
+  grid-column: 1 / -1;
+}
+
+.settings-refresh-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 250px);
+  gap: 20px;
+  align-items: end;
+}
+
+.settings-refresh-frequency .select:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.settings-summary dl {
+  margin: 0;
+}
+
+.settings-summary dl > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.settings-summary dl > div:last-child {
+  border-bottom: 0;
+}
+
+.settings-summary dt {
+  color: var(--muted);
+  font-size: 0.67rem;
+}
+
+.settings-summary dd {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.settings-maintenance .panel__body {
+  display: grid;
+  justify-items: start;
+}
+
+.settings-maintenance svg {
+  color: var(--teal);
+}
+
+.settings-maintenance h2 {
+  margin: 11px 0 6px;
+  font-size: 0.88rem;
+}
+
+.settings-maintenance p {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.settings-maintenance--danger {
+  border-color: color-mix(in srgb, var(--critical) 30%, var(--line));
+}
+
+.settings-maintenance--danger svg {
+  color: var(--critical);
+}
+
+.settings-status {
+  min-height: 20px;
+  margin: 16px 0 0;
+  color: var(--teal-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.settings-confirm-dialog {
+  width: min(calc(100% - 32px), 460px);
+  padding: 24px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow);
+}
+
+.settings-confirm-dialog::backdrop {
+  background: rgba(8, 15, 13, 0.62);
+}
+
+.settings-confirm-dialog__icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  color: var(--critical);
+  background: color-mix(in srgb, var(--critical) 10%, var(--surface));
+}
+
+.settings-confirm-dialog h2 {
+  margin-bottom: 8px;
+  font-size: 1.08rem;
+}
+
+.settings-confirm-dialog p {
+  color: var(--ink-soft);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.settings-confirm-dialog__actions {
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.settings-dialog-error {
+  padding: 9px 11px;
+  border: 1px solid color-mix(in srgb, var(--critical) 35%, var(--line));
+  border-radius: var(--radius-sm);
+  color: var(--critical) !important;
+  background: color-mix(in srgb, var(--critical) 8%, var(--surface));
+}
+
+@media (max-width: 1050px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .settings-choice-grid--three,
+  .settings-choice-grid--two,
+  .settings-form-grid,
+  .settings-refresh-row,
+  .settings-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-form-grid__wide {
+    grid-column: auto;
+  }
+}
